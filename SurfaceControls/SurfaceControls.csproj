@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFA68B22-9FAA-4347-848B-9807A29A784D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SurfaceControls</RootNamespace>
+    <AssemblyName>SurfaceControls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Surface, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LIB\Microsoft.Surface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Surface.Core">
+      <HintPath>..\LIB\Microsoft.Surface.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Surface.HidSupport">
+      <HintPath>..\LIB\Microsoft.Surface.HidSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Surface.NativeWrappers">
+      <HintPath>..\LIB\Microsoft.Surface.NativeWrappers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Surface.Presentation, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LIB\Microsoft.Surface.Presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Surface.Presentation.Generic">
+      <HintPath>..\LIB\Microsoft.Surface.Presentation.Generic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\add.png" />
+    <Resource Include="Resources\Icons\adjust color.png" />
+    <Resource Include="Resources\Icons\attach.png" />
+    <Resource Include="Resources\Icons\bookmark - add.png" />
+    <Resource Include="Resources\Icons\bookmark - delete.png" />
+    <Resource Include="Resources\Icons\calculator - addition.png" />
+    <Resource Include="Resources\Icons\calculator - divide.png" />
+    <Resource Include="Resources\Icons\calculator - equal.png" />
+    <Resource Include="Resources\Icons\calculator - minus.png" />
+    <Resource Include="Resources\Icons\calculator - multiply.png" />
+    <Resource Include="Resources\Icons\chat.png" />
+    <Resource Include="Resources\Icons\check.png" />
+    <Resource Include="Resources\Icons\delete.png" />
+    <Resource Include="Resources\Icons\document - copy.png" />
+    <Resource Include="Resources\Icons\document - delete.png" />
+    <Resource Include="Resources\Icons\document.png" />
+    <Resource Include="Resources\Icons\edit.png" />
+    <Resource Include="Resources\Icons\file - close.png" />
+    <Resource Include="Resources\Icons\file - copy.png" />
+    <Resource Include="Resources\Icons\file.png" />
+    <Resource Include="Resources\Icons\gift.png" />
+    <Resource Include="Resources\Icons\help.png" />
+    <Resource Include="Resources\Icons\mail %28reversed%29.png" />
+    <Resource Include="Resources\Icons\mail - copy.png" />
+    <Resource Include="Resources\Icons\mail - delete.png" />
+    <Resource Include="Resources\Icons\mail.png" />
+    <Resource Include="Resources\Icons\more.png" />
+    <Resource Include="Resources\Icons\photo - copy.png" />
+    <Resource Include="Resources\Icons\photo - crop.png" />
+    <Resource Include="Resources\Icons\photo - delete.png" />
+    <Resource Include="Resources\Icons\photo - redeye correction.png" />
+    <Resource Include="Resources\Icons\photo.png" />
+    <Resource Include="Resources\Icons\player - fastforward.png" />
+    <Resource Include="Resources\Icons\player - pause.png" />
+    <Resource Include="Resources\Icons\player - play.png" />
+    <Resource Include="Resources\Icons\player - rewind.png" />
+    <Resource Include="Resources\Icons\player - skipbackwards.png" />
+    <Resource Include="Resources\Icons\player - skipforward.png" />
+    <Resource Include="Resources\Icons\print.png" />
+    <Resource Include="Resources\Icons\purchase.png" />
+    <Resource Include="Resources\Icons\refresh.png" />
+    <Resource Include="Resources\Icons\rss.png" />
+    <Resource Include="Resources\Icons\search.png" />
+    <Resource Include="Resources\Icons\tools - alternative.png" />
+    <Resource Include="Resources\Icons\tools.png" />
+    <Resource Include="Resources\Icons\trash.png" />
+    <Resource Include="Resources\Icons\usb.png" />
+    <Resource Include="Resources\Icons\volume - mute.png" />
+    <Resource Include="Resources\Icons\volume.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
